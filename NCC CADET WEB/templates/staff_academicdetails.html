@@ -1,0 +1,77 @@
+{% include 'staffheader.html'%}
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+  
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+<center>
+	<h1 style="color: white">Add Academic Details</h1>
+	<form method="post">
+		<table class="table" style="width: 500px;color: white">
+			<tr>
+				<th>Student</th>
+				<td><select name="student" class="form-control">
+					<option>---Select---</option>
+					{% for row in data['stu']%}
+					<option value="{{row['student_id']}}">{{row['first_name']}}</option>
+					{% endfor %}
+				</select></td>
+			</tr>
+			<tr>
+				<th>Academic</th>
+				<td><input type="text" required="" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter Academic" name="acc"></td>
+			</tr>
+		<tr>
+			<th>phone</th>
+			<td><input type="text" name="ph" required="" pattern="[0-9]{10}" class="form-control" placeholder="enter phone" ></td>
+		</tr>
+		<tr>
+			<th>email</th>
+			<td><input type="email" name="mail" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter email" ></td>
+		</tr>
+		<tr>
+			<th>Details</th>
+			<td><input type="text" name="det" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter details" ></td>
+		</tr>
+		<tr>
+			<td align="center" colspan="2"><input type="submit" class="btn btn-success"  name="academic"></td>
+		</tr>
+		</table>
+	</form>
+</center>
+</div></div></div></div></div></section>
+<center>
+	<h1>View Academic Details</h1>
+	<table class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+			<th>Student</th>
+			<th>Academic</th>
+			<th>Details</th>
+			<th>Phone</th>
+			<th>Email</th>
+		</tr>
+		{% for row in data['accad'] %}
+		<tr>
+			<td>{{loop.index}}</td>
+			<td>{{row['first_name']}}</td>
+			<td>{{row['academic']}}</td>
+
+			<td>{{row['details']}}</td>
+			<td>{{row['phone']}}</td>
+
+			<td>{{row['email']}}</td>
+			{% endfor %}
+
+		</tr>
+	</table>
+</center>
+{% include 'footer.html'%}

@@ -1,0 +1,65 @@
+{% include 'staffheader.html'%}
+
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+<center>
+	<h1 style="color: white">Add Notification</h1>
+	<form method="post">
+		<table class="table" style="width: 500px;color: white">
+			
+			<tr>
+				<th>Notification</th>
+				<td><input type="text" required="" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter Notification" name="not"></td>
+			</tr>
+	
+		
+		<tr>
+			<th>Details</th>
+			<td><input type="text" name="det" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter details" ></td>
+		</tr>
+	
+		<tr>
+			<td align="center" colspan="2"><input type="submit" class="btn btn-success"  name="Notification"></td>
+		</tr>
+		</table>
+	</form>
+</center>
+</div></div></div></div></div></section>
+<center>
+	<h1>View Notification </h1>
+	<table class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+			
+			<th>Notification</th>
+			<th>Details</th>
+			<th>Date</th>
+			
+		</tr>
+		{% for row in data['notifi'] %}
+		<tr>
+			<td>{{loop.index}}</td>
+			
+			<td>{{row['title']}}</td>
+
+			<td>{{row['description']}}</td>
+			<td>{{row['date']}}</td>
+
+			
+			{% endfor %}
+
+		</tr>
+	</table>
+</center>
+{% include 'footer.html'%}

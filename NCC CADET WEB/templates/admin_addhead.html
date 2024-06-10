@@ -1,0 +1,141 @@
+{% include 'adminheader.html'%}
+
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" style="height: 900px">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel"  >
+
+      
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg);" >
+          <div class="carousel-container" >
+            <div class="container" >
+<center>
+<H1 style="color: white" >ADD NCC HEAD</H1>
+
+<form method="post">
+
+	{%if data['nhead']%}
+
+	<table class="table" style="width: 500px;color: white">
+
+
+		<tr>
+			<th>first name</th>
+			<td><input type="text" name="fname" required="" pattern="[A-Z a-z ]+$"  value="{{data['nhead'][0]['first_name']}}"  class="form-control" placeholder="enter frist name" ></td>
+		</tr>
+		<tr>
+			<th>last name</th>
+			<td><input type="text" name="lname" required="" pattern="[A-Z a-z ]+$"  value="{{data['nhead'][0]['last_name']}}" class="form-control" placeholder="enter last name" ></td>
+		</tr>
+		<tr>
+			<th>place</th>
+			<td><input type="text" name="place" required="" pattern="[A-Z a-z ]+$"  value="{{data['nhead'][0]['place']}}" class="form-control" placeholder="enater place" ></td>
+		</tr>
+		
+		<tr>
+			<th>phone</th>
+			<td><input type="text" name="ph" required=""  pattern="[0-9]{10}" value="{{data['nhead'][0]['phone']}}" class="form-control" placeholder="enter phone" ></td>
+		</tr>
+		<tr>
+			<th>email</th>
+			<td><input type="email" name="mail"  class="form-control" value="{{data['nhead'][0]['email']}}" placeholder="enter email" ></td>
+		</tr>
+	
+	
+		<tr>
+			<td align="center" colspan="2"><input type="submit" name="update" class="btn btn-success"></td>
+				
+		</tr>
+	</table>
+
+	{% else %}
+
+	<table class="table" style="width: 500px;color: white">
+
+		
+		<tr>
+			<th>first name</th>
+			<td><input type="text" name="fname" required="" pattern="[A-Z a-z ]+$"   class="form-control" placeholder="enter frist name" ></td>
+		</tr>
+		<tr>
+			<th>last name</th>
+			<td><input type="text" name="lname" required="" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enter last name" ></td>
+		</tr>
+		<tr>
+			<th>place</th>
+			<td><input type="text" name="place" required="" pattern="[A-Z a-z ]+$"  class="form-control" placeholder="enater place" ></td>
+		</tr>
+		
+		<tr>
+			<th>phone</th>
+			<td><input type="text" name="ph" required="" pattern="[0-9]{10}" class="form-control" placeholder="enter phone" ></td>
+		</tr>
+		<tr>
+			<th>email</th>
+			<td><input type="email" name="mail"   class="form-control" placeholder="enter email" ></td>
+		</tr>
+	
+		<tr>
+				<th>user name</th>
+				<td><input type="text" required=""   class=" form-control" name="uname"  placeholder="create a user name"></td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td><input type="password"   class=" form-control" required=""  name="pass" placeholder="create a password" ></td>
+			</tr>
+		
+		<tr>
+			<td align="center" colspan="2"><input type="submit" name="head" class="btn btn-success"></td>
+				
+		</tr>
+	</table>
+	{% endif %}
+
+	</center>
+
+	        </div>
+          </div>
+        </div>
+    </div></div></section>
+
+
+	 <center>
+
+
+					<h1>view head teachers</h1>
+					<table class="table" style="width: 800px">
+						<tr>
+							<th>Slno</th>
+							<th>first name</th>
+							<th>last name</th>
+							<th>place</th>
+							<th>phone</th>
+							<th>email</th>
+						</tr>
+
+						{% for row in data['head']%}
+					
+							<tr>
+							<td>{{loop.index}}</td>
+							<td>{{row['first_name'] }}</td>
+							<td>{{row['last_name'] }}</td>
+							<td>{{row['place'] }}</td>
+							
+							<td>{{row['phone'] }}</td>
+							<td>{{row['email']}}</td>
+
+							<td><a class="btn btn-success" href="?action=update&lid={{row['login_id']}}">Update</a></td>
+							<td><a class="btn btn-success" href="?action=delete&lid={{row['login_id']}}">Delete</a></td>
+							</tr>
+						{% endfor %}
+						
+
+					</table>				
+
+</form>
+</center>
+	{% include 'footer.html'%}

@@ -1,0 +1,42 @@
+	
+{% include 'publicheader.html'%}
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+             <center>
+<h1 style="color: white;"><b>Login</b></h1>
+	<form method="post">
+		<table align="center" class="table" style="width: 500px;color: white">
+			<tr>
+				<th>user name</th>
+				<td><input type="text" name="uname"   required="" class="form-control" placeholder="enter your user name"></td>
+			</tr>
+			<tr>
+				<th>password</th>
+				<td><input type="password" name="pass"  required="" class="form-control" placeholder="enter your password"></td>
+			</tr>
+			<tr>
+				<td align="center" colspan="2"><input class="btn btn-success" type="submit" name="login" value="LOGIN">  </td>
+			</tr>
+		</table>
+		
+	</form>	
+
+	</center>
+            </div>
+          </div>
+        </div>
+    </div></div></section>
+
+
+	{% include 'footer.html'%}

@@ -1,0 +1,49 @@
+	
+{% include 'adminheader.html'%}
+
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" style="height: 200px">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+            	</div></div></div></div></div></section>
+	 <center>
+
+
+					<h1>View Activites</h1>
+					<table class="table" style="width: 800px">
+						<tr>
+							<th>Slno</th>
+							<th>Teacher</th>
+							<th>Activites</th>
+							<th>Details</th>
+							<th>Date</th>
+							
+						</tr>
+
+						{% for row in data['act']%}
+					
+							<tr>
+							<td>{{loop.index}}</td>
+							<td>{{row['first_name'] }}</td>
+							<td>{{row['Activites'] }}</td>
+							<td>{{row['details'] }}</td>
+							
+							<td>{{row['date'] }}</td>
+					
+							</tr>
+						{% endfor %}
+						
+
+					</table>				
+
+</form>
+</center>
+{% include 'footer.html'%}

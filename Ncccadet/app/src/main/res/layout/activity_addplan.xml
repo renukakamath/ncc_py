@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/image2"
+    android:orientation="vertical"
+    tools:context=".Addplan">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Plan"
+        android:textSize="20dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="101dp" />
+
+    <EditText
+        android:id="@+id/plan"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="enter plan"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <EditText
+        android:id="@+id/details"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="details"
+        android:gravity="center"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <EditText
+        android:id="@+id/planfor"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="enter planed for"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="353dp" />
+
+    <Button
+        android:id="@+id/planbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout1"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Plan"
+
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="558dp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_marginLeft="30dp"
+        android:layout_width="409dp"
+        android:layout_height="152dp"
+
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="578dp" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+ {% include 'headheader.html'%}
+
+ <!-- ======= Hero Section ======= -->
+  <section id="hero" style="height: 200px">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(static/assets/img/slide/slide-1.jpg)">
+          <div class="carousel-container">
+            <div class="container">
+            	</div></div></div></div></div></section>
+
+<center>
+	<h1>View Notification </h1>
+	<table class="table" style="width: 500px">
+		<tr>
+			<th>Slno</th>
+			
+			<th>Notification</th>
+			<th>Details</th>
+			<th>Date</th>
+			
+		</tr>
+		{% for row in data['notifi'] %}
+		<tr>
+			<td>{{loop.index}}</td>
+			
+			<td>{{row['title']}}</td>
+
+			<td>{{row['description']}}</td>
+			<td>{{row['date']}}</td>
+
+			
+			{% endfor %}
+
+		</tr>
+	</table>
+</center>
+
+{% include 'footer.html'%}

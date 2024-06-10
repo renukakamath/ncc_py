@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+
+    android:background="@drawable/image2"
+    android:orientation="vertical"
+    tools:context=".Addstudents">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Students"
+        android:textSize="20dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:gravity="center"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:inputType="textPersonName"
+        android:hint="enter first name"
+
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <EditText
+        android:id="@+id/lname"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="enter lastname"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        android:layout_marginTop="10dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <EditText
+        android:id="@+id/place"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:hint="enter place"
+        android:layout_marginTop="10dp"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="41dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:inputType="textPersonName"
+        android:hint="enter phone number"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:background="@drawable/layout"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        android:hint="enter email"
+        android:gravity="center"
+        android:textColorHint="#ffff"
+        android:textColor="#ffff"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="597dp" />
+
+    <Button
+        android:id="@+id/student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/layout1"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="651dp" />
+
+    <TextView
+        android:id="@+id/View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Students"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
